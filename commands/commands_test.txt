@@ -1,0 +1,49 @@
+The following command compute the .json file with the prediction
+
+python tools/test.py /home/datres/Catchme/mmdetection/configs/retinanet/retinanet_r50_fpn_2x_coco.py /data0/work_dirs/retinanet_mmdet_120321/epoch_50.pth --format-only --show-score-thr 0.5  --options "jsonfile_prefix=./results0.5"
+
+The following command compute the .json file with the prediction and save the predictions
+
+python tools/test.py /home/datres/Catchme/mmdetection/configs/retinanet/retinanet_r50_fpn_2x_coco.py /data0/work_dirs/retinanet_mmdet_120321/epoch_50.pth --format-only --show-score-thr 0.63  --options "jsonfile_prefix=./results0.5" --show-dir /data0/work_dirs/retinanet_mmdet_120321/test_result/   
+
+
+Computes the mAP 0.5:0.95 of the model 
+
+ python tools/test.py /home/datres/Catchme/mmdetection/configs/retinanet/retinanet_r50_fpn_2x_coco.py /data0/work_dirs/retinanet_mmdet_120321/epoch_50.pth --eval bbox --show-score-thr 0.8
+
+ Compute the mAP50 for each class with a certain threshold score 
+
+ python tools/catchme/COCO_mAP50_catchme.py --path_to_test /home/datres/Catchme/mmdetection/annotations/annotations_12_03_2021/test_evaluation.csv   --path_to_pred /home/datres/Catchme/mmdetection/results0.5.bbox.json --path_to_test_json /home/datres/Catchme/mmdetection/annotations/annotations_12_03_2021/test.json
+
+ Optimize the confidence threshold
+
+ python tools/catchme/optimscore.py --path_to_test /home/datres/Catchme/mmdetection/annotations/annotations_12_03_2021/test_evaluation.csv   --path_to_pred /home/datres/Catchme/mmdetection/results.bbox.json --path_to_test_json /home/datres/Catchme/mmdetection/annotations/annotations_12_03_2021/test.json --step 0.01
+
+
+____________________________________________________________________________________________________________________________________________
+
+CONVERT THE MODEL TO ONXX
+
+
+
+
+ ------------------------ RETINANET Best Model using ROC------------------------ 
+
+The best model according to ROC is the one with threshold 0.63. Below the statistics are vailable
+
+------------- SCAFOIDEUS TITANIUS ------------- 
+
+AP0.5:     0.8018018018018018
+Recall0.5:     0.7606837606837606
+IR:     0.7606837606837606
+
+------------- PLANOCOCCUS_FICUS_M ------------- 
+
+AP0.5:     0.34545454545454546
+Recall0.5:     0.2159090909090909
+IR:     0.18811881188118812
+
+------------- GENERAL ------------- 
+
+mAP0.5:     0.5736281736281736
+Recall0.5:     0.4882964257964258

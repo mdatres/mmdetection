@@ -1,0 +1,6 @@
+_____________________________________________________________________________________________________$
+
+CONVERT THE MODEL TO ONXX
+
+ python tools/deployment/pytorch2onnx.py configs/retinanet/retinanet_r50_fpn_2x_coco.py /data0/work_dirs/retinanet_mmdet_120321/epoch_50.pth --output-file /home/datres/Catchme/mmdetection/ONNX_models/retinanet/retinanet.onnx  --input-img /data0/Catchme/dataset/12_03_2021/images/20201221_rosina_federico_isera_16_7__3_.jpg --shape 3456 4608 --test-img /data0/Catchme/dataset/12_03_2021/images/20201212_catchme-pietram__4_.jpg --verify
+
