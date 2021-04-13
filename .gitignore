@@ -112,8 +112,17 @@ data
 # custom
 *.pkl
 *.pkl.json
+*.json
 *.log.json
 work_dirs/
+*.pdf
+*.jpg
+*.csv
+model_optimizers/catchme/nms_pred
+model_optimizers/catchme/pred_no_nms
+model_optimizers/catchme/score_optim
+model_optimizers/catchme/score_pred
+model_optimizers/catchme/test_pred
 
 # Pytorch
 *.pth
