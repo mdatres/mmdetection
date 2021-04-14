@@ -6,7 +6,7 @@ train_pipeline = [
     dict(type='LoadAnnotations', with_bbox=True),
     dict(
         type='Resize',
-        img_scale=[(1152, 1152), (1152, 960)],
+        img_scale=[(1152, 1152), (1652, 1460)],
         multiscale_mode='range',
         keep_ratio=True),
     dict(type='RandomFlip', flip_ratio=0.5),
